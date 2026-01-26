@@ -1,17 +1,22 @@
-let BMI ={
-    Thin : 18.5,
-    Normal : 25,
-    Fat : 30,
-    OverFat :30,
-};
-let weight = 110; // กิโลกรัม          
-let height = 1.65; // เมตร
-let bmiValue = weight / (height * height);
-console.log("BMI = " + bmiValue.toFixed(2));
-if (bmiValue < BMI.Thin){
-    console.log("คุณอยู่ในเกณฑ์ ผอม");
-}
-else if (bmiValue < BMI.Normal){
-    console.log("คุณอยู่ในเกณฑ์ ปกติ");
-}
+function calculateBMI(weight, height) {
 
+    let bmi='';
+    let catergory='';
+
+    bmi = weight / (height * height);
+    bmi = bmi.toFixed(2);
+
+
+    if (bmi < 18.5){
+        catergory = "ผอม";
+    }else if (18.5 <= bmi && bmi <= 25){
+        catergory = "ปกติ";
+    }else if (25 < bmi && bmi <= 30){
+        catergory = "อ้วน";
+    }else {
+        catergory = "อ้วนมาก";
+    }
+console.log("BMI: " + bmi);
+console.log("สถานะ: " + catergory);
+}
+calculateBMI(40,1.45);
