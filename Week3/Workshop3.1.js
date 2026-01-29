@@ -1,17 +1,17 @@
-let sumEven = 0;
-let productOdd  = 1;
+let sumEven = 0;     //การสร้างตัวแปร เพื่อเก็บข้อมูล ผลรวมเลขคู่
+let productOdd  = 1; //ตัวแปรเก้บผลรวมเลขคี่
 
-for (let i = 1; i<=50; i++){
-    if (i % 2 === 0 ){
-        sumEven += i;
+for (let i = 1; i<=50; i++){   // การใช้for loopเพื่อวนเลข 1-50
+    if (i % 2 === 0 ){  //เงื่อนไขตรวจสอบเลขคู่
+        sumEven += i; //การบวกรวมเลขคู่
     }
 };
-for (let j =1; j <= 10; j++){
-    if (j % 2 !== 0){
-        productOdd *=  j;
+for (let j =1; j <= 10; j++){  //การใช้for loopเพื่อวนเลข 1-10 
+    if (j % 2 !== 0){ //เงื่อไขเป็นการตรวจสอบเลขคี่
+        productOdd *=  j;  //การคูณผลรวม
     }
 };
 
 
-console.log("ผลรวมเลขคู่ 2-50: " + sumEven);
-console.log("ผลคูณเลขคี่ 1-10: " + productOdd ,("(คือ 1*3*5*7*9)"));
+console.log("ผลรวมเลขคู่ 2-50: " + sumEven); //เเสดงผลรวมคู่
+console.log("ผลคูณเลขคี่ 1-10: " + productOdd ,("(คือ 1*3*5*7*9)")); //เเสดงผลรวมคี่
