@@ -1,5 +1,5 @@
 import express from 'express';
-import { prisma } from '../lib/prisma'
+import { prisma } from '../lib/prisma';
 
 
 const app = express();
@@ -42,4 +42,6 @@ app.get('/user', async (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
+
+    
 });
