@@ -1,0 +1,18 @@
+ในการอธิบาย จามโจทย์
+
+ใช้express สร้างsever 
+ใช้prisma คุยกับdatabase
+มี Api สำหรับ เพิ่ม/ดุ/เเก้ไข/ลบ 
+
+Route หลัก Test sever 
+GET : เช๊คว่าเชริฟเวอร์ ทำงาน ไหม
+POST :User คือการเพิ่มUser รับ name ,email
+GET/User เพื่อดูUesrทั้งหมด 
+GET /users/email/:email หา User ด้วยEmail
+DELETE /users/:id การลบ ไอดีออกไปเลย
+PUT /user/:id  การแก้ไข้ 
+POST /posts การเพิ่มเข้าไป 
+GET /posts ดูโพสทั้งหมด
+GET /posts/:id ดูตามไอดี
+DELETE /posts/:id การลบPost
+
