@@ -1,5 +1,6 @@
 //ติ้ดตั้ง google/dotenv
-npm install --save-dev nodemon
-npm install -D typescript @types/node ts-node
-npm install @google/genai dotenv 
-//สร้างไฟล์
+//npm install --save-dev nodemon
+//npm install -D typescript @types/node ts-node
+//npm install @google/genai dotenv 
+//ติดตั้ง 
+//npm install express && npm install -D @types/express
