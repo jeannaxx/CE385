@@ -13,7 +13,7 @@ datasource db {
 }
 
 model User{
-  id String @id @default(uuid()) @db.uuid
+  id String @id @default(uuid()) @db.Uuid
   email String @unique
   name String ?
   createdAt DateTime @default(now())
@@ -21,10 +21,11 @@ model User{
 }
 
 
-model Order{
-  id   String @id@default(uuid()) @db.uuid
-  item String
-  quantity Int @default(1)
-  usertId  String @db.uuid
-  userId String @d 
+model Order {
+  id        String   @id @default(uuid()) @db.Uuid
+  item      String
+  quantity  Int      @default(1)
+  userId    String   @db.Uuid        // ← needs @db.Uuid (capital U), not @db.uuid
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
 }
