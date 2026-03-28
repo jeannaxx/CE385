@@ -15,14 +15,13 @@ export function readPrismaSchema(): ModelInfo[] {
 
   let match;
   while ((match = modelRegex.exec(content)) !== null) {
-    const modelName = match[1]; // ชื่อ model (group 1)
-    const body = match[2]; // body ของ model (group 2)
+    const modelName = match[1]; 
+    const body = match[2];
 
-    // extract field names (ข้าม relation และ decorator)
+ 
     const fields = body
-      .split("\n") // แยกเป็นบรรทัด
+      .split("\n")
       .map((line) => line.trim()) // ตัดช่องว่าง
-      // กรอง: ไม่เอาบรรทัดว่าง, comment, decorator
       .filter(
         (line) =>
           line &&

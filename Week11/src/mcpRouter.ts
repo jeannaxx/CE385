@@ -3,7 +3,7 @@ import { runQuery } from "./tools/queryTool";
 
 const router = Router();
 
-// POST /mcp - รับ tool call จาก AI
+// POST 
 router.post("/", async (req: Request, res: Response) => {
   const { tool, input } = req.body;
 

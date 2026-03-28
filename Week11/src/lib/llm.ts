@@ -8,7 +8,7 @@ import { getSchemaAsText } from "./schemaReader";
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 
-// Tool definition ที่ส่งให้ AI รู้จัก
+// Tool ที่ส่งให้ AI รู้จัก
 const tools: Tool[] = [
   {
     functionDeclarations: [
@@ -68,9 +68,9 @@ Rules:
   const chat = model.startChat(); // เริ่ม chat session
   
 
-  let response = await chat.sendMessage(userMessage); // ส่งข้อความแรก
+  let response = await chat.sendMessage(userMessage); 
 
-  // Handle function call loop
+
   while (response.response.functionCalls()?.length) {
     const calls = response.response.functionCalls()!;
 
